@@ -14,7 +14,7 @@ class TravellerServiceTests {
 
     void testAddCheckPoint() {
         Traveller traveller = new Traveller(name: "little-tree").save()
-        service.addCheckPoint(traveller.id, "deadsea", "so good")
+        service.addCheckPoint(traveller, "deadsea", "so good")
 
         assert 1 == CheckPoint.count
         assert 1 == CheckPointComment.count
