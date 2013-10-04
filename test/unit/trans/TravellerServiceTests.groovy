@@ -16,7 +16,17 @@ class TravellerServiceTests {
         Traveller traveller = new Traveller(name: "little-tree").save()
         service.addCheckPoint(traveller, "deadsea", "so good")
 
+        assert 1 == Traveller.count
         assert 1 == CheckPoint.count
         assert 1 == CheckPointComment.count
+    }
+
+    void testAddCheckPointUnsaveComment() {
+        Traveller traveller = new Traveller(name: "little-tree").save()
+        service.addCheckPoint(traveller, "deadsea", null)
+
+        assert 1 == Traveller.count
+        assert 1 == CheckPoint.count
+        assert 0 == CheckPointComment.count
     }
 }
