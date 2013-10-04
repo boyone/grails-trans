@@ -8,4 +8,7 @@ package trans
  * To change this template use File | Settings | File Templates.
  */
 class CheckPointComment {
+    Traveller traveller
+    CheckPoint checkPoint
+    String comment
 }

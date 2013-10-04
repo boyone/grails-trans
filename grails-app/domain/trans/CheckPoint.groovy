@@ -8,4 +8,5 @@ package trans
  * To change this template use File | Settings | File Templates.
  */
 class CheckPoint {
+    String name
 }
